@@ -18,6 +18,6 @@ app.get('*', (request, response) => {
 })
 
 // Start the server
-const listener = app.listen(process.env.PORT || 80, () => {
+const listener = app.listen(process.env.PORT || 3000, () => {
 	console.info(`Server started on port ${listener.address().port}!`)
 })
