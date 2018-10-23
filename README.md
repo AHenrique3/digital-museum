@@ -20,15 +20,34 @@ This version is a fork and extension from the original project [Digital Museum][
 ## Set server port
 The default server port can be changed in the index.js file in the server folder. The port can be also specified in the environment.
 
+## Environment
+To this moment, only two environment variables are used: NODE_ENV and PORT. PORT is used to define running port of the server, and the NODE_ENV, if set to production, defines the build configuration.
+
 ## Launch
-- In the project folder, launch the commands:
+- In the project folder, launch the command:
 
         npm start 
-    or 
 
-        npm run build:<mode>
-        npm start
-  - mode can be either dev or prod
+- The environment variables (on Linux based OS) can be set as follow:
+
+        ENV_VAR_NAME=VAR_VALUE
+
+- To make the variables persistent:
+
+        export ENV_VAR_NAME=VAR_VALUE
+
+- Obs: the command `printenv ` can be used to check the defined environment variables and it's values. Additionally ` printenv ENV_VAR_NAME` can be used to get the value of the variable specified.
+
+## Folder Structure
+```
+.
+├── buildScripts : the scripts to build the app
+├── node_modules : store the dependencies
+├── output : store the builds 
+├── res : icons used
+├── server : server configuration
+└── src : the app code
+```
 
 ## Built With
 
