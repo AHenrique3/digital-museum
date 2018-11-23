@@ -15,6 +15,7 @@ const en = {
 			newItem: 'New collection item',
 			updateItem: 'Update collection item',
 			taxonomy: 'Taxonomy',
+			local: 'Item location',
 		},
 
 		hint: {

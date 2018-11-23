@@ -3,7 +3,7 @@ import { Card } from 'material-ui/Card'
 import { Subheader, TextField } from 'material-ui'
 import strings from '../../strings'
 import CollectionItemDetailCover from './CollectionItemDetailCover'
-
+import * as images from '../../images/Map.png'
 
 export default class CollectionItemDetail extends React.Component {
 	render() {
@@ -44,7 +44,8 @@ export default class CollectionItemDetail extends React.Component {
 									underlineShow={ false }/>
 							<TextField
 									style={ inputStyle }
-									inputStyle={ inputTextStyle }
+									multiLine={true}
+									textareaStyle={ inputTextStyle }
 									defaultValue={ item.simpleDescription }
 									disabled={ true }
 									floatingLabelText={ strings.collectionItem.hint.simpleDescription }
@@ -107,6 +108,18 @@ export default class CollectionItemDetail extends React.Component {
 									defaultValue={ item.taxonomy.species }
 									disabled={ true }
 									floatingLabelText={ strings.collectionItem.hint.taxonomy.species }
+									underlineShow={ false }/>
+						</div>
+						<div style={ sectionStyle }>
+							<Subheader>{ strings.collectionItem.title.local }</Subheader>
+							<img style={ {margin: 0, maxWidth: 560} } src={ images.default }/>
+							<br/>
+							<TextField
+									style={ inputStyle }
+									inputStyle={ inputTextStyle }
+									defaultValue={ (this.props.location.search).split('?')[1] }
+									disabled={ true }
+									floatingLabelText="beacon"
 									underlineShow={ false }/>
 						</div>
 					</Card>

@@ -15,6 +15,7 @@ const ptBR = {
 			newItem: 'Novo item',
 			updateItem: 'Atualizar item',
 			taxonomy: 'Taxonomia',
+			local: 'Posição do item',
 		},
 
 		hint: {

@@ -43,6 +43,10 @@ module.exports = (path, outputPath) => ({
 				test: /\.json$/,
 				loader: 'json-loader',
 			},
+			{
+				test: /\.(gif|svg|jpg|png)$/,
+				loader: "file-loader",
+			}
 		],
 	},
 	plugins: [
