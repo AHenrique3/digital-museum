@@ -52,7 +52,7 @@ export default class CollectionItemDetail extends React.Component {
 						</div>
 
 						<div style={ sectionStyle }>
-							<Subheader>Taxonomy</Subheader>
+							<Subheader>{ strings.collectionItem.title.taxonomy }</Subheader>
 							<TextField
 									style={ inputStyle }
 									inputStyle={ inputTextStyle }
